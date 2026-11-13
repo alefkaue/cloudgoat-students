@@ -13,11 +13,14 @@ O objetivo é manter o aprendizado dos cenários e documentar os compromissos ne
 
 ## Estrutura
 
+Para organizar os próximos estudos, consulte as fichas individuais de [AWS](docs/scenarios/aws/README.md) e [Azure](docs/scenarios/azure/README.md), os [requisitos comuns](docs/scenarios/PREPARATION.md) e o [PDF da primeira adaptação](docs/scenarios/aws/cloud_breach_s3_academy/adaptation.pdf). As fichas descrevem o original e o que verificar; somente adaptações testadas entram como executáveis no catálogo acima.
+
 ```text
 scenarios/aws/       adaptações AWS independentes
 scenarios/azure/     futuras adaptações Azure
 docs/compatibility.md
-docs/scenarios/      comparação técnica e PDF de cada cenário
+docs/scenarios/aws/  fichas AWS por cenário e PDF da adaptação
+docs/scenarios/azure/ fichas Azure por cenário
 scripts/            instalação das adaptações no CloudGoat
 ```
 
