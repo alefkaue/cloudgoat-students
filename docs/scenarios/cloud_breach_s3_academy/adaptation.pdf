@@ -13,7 +13,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 5 0 obj
-<< /Length 4206 >>
+<< /Length 4292 >>
 stream
 q
 0 0 0 rg
@@ -37,26 +37,26 @@ BT /F1 10.5 Tf 52.0 473.2 Td (Não existe uma permissão universal de conta de est
 BT /F1 10.5 Tf 52.0 459.1 Td (uma sessão voclabs não demonstra compatibilidade com todas as instituições, regiões) Tj ET
 BT /F1 10.5 Tf 52.0 444.9 Td (ou assinaturas. A matriz docs/compatibility.md registra o ambiente observado e os) Tj ET
 BT /F1 10.5 Tf 52.0 430.7 Td (requisitos de cada adaptação.) Tj ET
-BT /F2 14.5 Tf 52.0 404.5 Td (2. Por que foi necessário mudar o laboratório) Tj ET
-BT /F1 10.5 Tf 52.0 376.0 Td (A tentativa inicial usou codebuild_secrets. A autenticação e o planejamento) Tj ET
-BT /F1 10.5 Tf 52.0 361.8 Td (funcionaram, mas a conta negou criação de usuários, roles e políticas IAM. A) Tj ET
-BT /F1 10.5 Tf 52.0 347.6 Td (instância RDS solicitada também foi negada. A falha não foi causada pela VM local) Tj ET
-BT /F1 10.5 Tf 52.0 333.4 Td (nem pelo token após sua configuração correta.) Tj ET
-BT /F1 10.5 Tf 52.0 314.3 Td (Foi escolhido outro cenário, cloud_breach_s3, cuja infraestrutura exige menos) Tj ET
-BT /F1 10.5 Tf 52.0 300.1 Td (serviços e pode reutilizar uma identidade institucional. Portanto, o resultado não) Tj ET
-BT /F1 10.5 Tf 52.0 285.9 Td (é uma versão de codebuild_secrets: é uma adaptação separada de cloud_breach_s3.) Tj ET
-BT /F1 10.5 Tf 52.0 271.7 Td (Essa distinção deve ser explicada ao professor.) Tj ET
-BT /F2 14.5 Tf 52.0 245.6 Td (3. Como funciona o cenário original) Tj ET
-BT /F1 10.5 Tf 52.0 217.0 Td (O original cria uma VPC com duas sub-redes públicas, rotas de internet, grupos de) Tj ET
-BT /F1 10.5 Tf 52.0 202.8 Td (segurança, uma EC2 Ubuntu, uma chave SSH e um bucket S3 com arquivos fictícios.) Tj ET
-BT /F1 10.5 Tf 52.0 188.6 Td (Também cria uma role IAM com AmazonS3FullAccess e um instance profile que liga essa) Tj ET
-BT /F1 10.5 Tf 52.0 174.5 Td (role à EC2.) Tj ET
-BT /F1 10.5 Tf 52.0 155.3 Td (A aplicação é um nginx configurado como proxy. A configuração vulnerável e a) Tj ET
-BT /F1 10.5 Tf 52.0 141.1 Td (identidade da instância compõem o exercício. O aluno começa como um visitante) Tj ET
-BT /F1 10.5 Tf 52.0 126.9 Td (externo, com o IP do servidor, e precisa compreender o comportamento do endpoint e) Tj ET
-BT /F1 10.5 Tf 52.0 112.8 Td (as relações entre aplicação, identidade e armazenamento. O objetivo é recuperar os) Tj ET
-BT /F1 10.5 Tf 52.0 98.6 Td (dados fictícios do cenário.) Tj ET
-BT /F1 10.5 Tf 52.0 79.4 Td (No código original, um provisionador Terraform envia proxy.com por SSH. Um script) Tj ET
+BT /F1 10.5 Tf 52.0 411.5 Td (Uma inspeção estática da base 63c65bd encontrou criação de roles em 28 dos 29) Tj ET
+BT /F1 10.5 Tf 52.0 397.4 Td (cenários AWS. O único sem criação de role, iam_privesc_by_rollback, cria usuário,) Tj ET
+BT /F1 10.5 Tf 52.0 383.2 Td (política e chave IAM. Todos encontram alguma dependência incompatível com as) Tj ET
+BT /F1 10.5 Tf 52.0 369.0 Td (negativas IAM observadas nesta sessão voclabs. Não executamos os 29 cenários e essa) Tj ET
+BT /F1 10.5 Tf 52.0 354.8 Td (evidência não autoriza generalizar o bloqueio para toda conta de estudante ou para) Tj ET
+BT /F1 10.5 Tf 52.0 340.7 Td (Azure. A negativa de RDS também foi específica à configuração solicitada; não) Tj ET
+BT /F1 10.5 Tf 52.0 326.5 Td (demonstra indisponibilidade de todo o serviço.) Tj ET
+BT /F2 14.5 Tf 52.0 300.3 Td (2. Por que foi necessário mudar o laboratório) Tj ET
+BT /F1 10.5 Tf 52.0 271.7 Td (A tentativa inicial usou codebuild_secrets. A autenticação e o planejamento) Tj ET
+BT /F1 10.5 Tf 52.0 257.6 Td (funcionaram, mas a conta negou criação de usuários, roles e políticas IAM. A) Tj ET
+BT /F1 10.5 Tf 52.0 243.4 Td (instância RDS solicitada também foi negada. A falha não foi causada pela VM local) Tj ET
+BT /F1 10.5 Tf 52.0 229.2 Td (nem pelo token após sua configuração correta.) Tj ET
+BT /F1 10.5 Tf 52.0 210.0 Td (Foi escolhido outro cenário, cloud_breach_s3, cuja infraestrutura exige menos) Tj ET
+BT /F1 10.5 Tf 52.0 195.9 Td (serviços e pode reutilizar uma identidade institucional. Portanto, o resultado não) Tj ET
+BT /F1 10.5 Tf 52.0 181.7 Td (é uma versão de codebuild_secrets: é uma adaptação separada de cloud_breach_s3.) Tj ET
+BT /F1 10.5 Tf 52.0 167.5 Td (Essa distinção deve ser explicada ao professor.) Tj ET
+BT /F2 14.5 Tf 52.0 141.3 Td (3. Como funciona o cenário original) Tj ET
+BT /F1 10.5 Tf 52.0 112.8 Td (O original cria uma VPC com duas sub-redes públicas, rotas de internet, grupos de) Tj ET
+BT /F1 10.5 Tf 52.0 98.6 Td (segurança, uma EC2 Ubuntu, uma chave SSH e um bucket S3 com arquivos fictícios.) Tj ET
+BT /F1 10.5 Tf 52.0 84.4 Td (Também cria uma role IAM com AmazonS3FullAccess e um instance profile que liga essa) Tj ET
 BT /F1 8 Tf 0 0 0 rg 52 30 Td (CloudGoat - documento de estudo - pagina 1) Tj ET
 Q
 endstream
@@ -65,55 +65,54 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
 endobj
 7 0 obj
-<< /Length 4875 >>
+<< /Length 4689 >>
 stream
 q
 0 0 0 rg
-BT /F1 10.5 Tf 52.0 790.0 Td (de inicialização instala o nginx e utiliza o arquivo recebido. Esses dois) Tj ET
-BT /F1 10.5 Tf 52.0 775.8 Td (mecanismos podem executar em momentos diferentes; a adaptação concentra essa) Tj ET
-BT /F1 10.5 Tf 52.0 761.7 Td (configuração na inicialização para reduzir essa dependência temporal.) Tj ET
-BT /F2 14.5 Tf 52.0 735.5 Td (4. O que a conta acadêmica ofereceu) Tj ET
-BT /F1 10.5 Tf 52.0 706.9 Td (A consulta ao IAM confirmou um instance profile preexistente chamado) Tj ET
-BT /F1 10.5 Tf 52.0 692.7 Td (LabInstanceProfile, associado à LabRole, com confiança para EC2. As políticas) Tj ET
-BT /F1 10.5 Tf 52.0 678.6 Td (consultadas oferecem operações EC2 e S3 e impõem restrições de região, imagem de) Tj ET
-BT /F1 10.5 Tf 52.0 664.4 Td (sistema, tipo de instância e volume.) Tj ET
-BT /F1 10.5 Tf 52.0 645.2 Td (Essas políticas pertencem à role da instância. Elas não são, por si só, prova de) Tj ET
-BT /F1 10.5 Tf 52.0 631.0 Td (todas as permissões efetivas da sessão que provisiona o ambiente. Foi executado) Tj ET
-BT /F1 10.5 Tf 52.0 616.9 Td (também um pedido EC2 em modo dry-run, que retornou Request would have succeeded com) Tj ET
-BT /F1 10.5 Tf 52.0 602.7 Td (os parâmetros escolhidos. Esse teste não criou uma instância e foi seguido por) Tj ET
-BT /F1 10.5 Tf 52.0 588.5 Td (validação na implantação real.) Tj ET
-BT /F1 10.5 Tf 52.0 569.3 Td (As credenciais do aluno são temporárias: Access Key ID, Secret Access Key e Session) Tj ET
-BT /F1 10.5 Tf 52.0 555.2 Td (Token devem vir juntos da seção AWS CLI do laboratório. O perfil local usado nos) Tj ET
-BT /F1 10.5 Tf 52.0 541.0 Td (exemplos é cloudgoat-lab. Nenhuma credencial, número de conta específico ou token) Tj ET
-BT /F1 10.5 Tf 52.0 526.8 Td (foi incluído neste repositório público.) Tj ET
-BT /F2 14.5 Tf 52.0 500.6 Td (5. Mudanças e justificativas) Tj ET
-BT /F1 10.5 Tf 52.0 472.1 Td (1. Identidade da EC2: removemos a criação da role e do instance profile originais e) Tj ET
-BT /F1 10.5 Tf 52.0 457.9 Td (usamos um data source para LabInstanceProfile. Não alteramos a LabRole, não) Tj ET
-BT /F1 10.5 Tf 52.0 443.7 Td (anexamos políticas e não tentamos liberar ações negadas. O Terraform não exclui) Tj ET
-BT /F1 10.5 Tf 52.0 429.5 Td (esse recurso institucional no encerramento.) Tj ET
-BT /F1 10.5 Tf 52.0 410.4 Td (2. Sistema operacional remoto: substituímos a AMI Ubuntu por Amazon Linux 2023) Tj ET
-BT /F1 10.5 Tf 52.0 396.2 Td (x86_64, obtida de um parâmetro público AWS. A mudança atende à restrição observada) Tj ET
-BT /F1 10.5 Tf 52.0 382.0 Td (sobre o proprietário da AMI. A VM local continua Ubuntu Server; ela apenas controla) Tj ET
-BT /F1 10.5 Tf 52.0 367.8 Td (o laboratório remoto.) Tj ET
-BT /F1 10.5 Tf 52.0 348.7 Td (3. Capacidade: mantivemos t3.micro e volume gp2 de 8 GiB. A adaptação não precisa) Tj ET
-BT /F1 10.5 Tf 52.0 334.5 Td (de RDS nem CodeBuild. Essa escolha é diferente dos recursos do cenário que falhou) Tj ET
-BT /F1 10.5 Tf 52.0 320.3 Td (inicialmente.) Tj ET
-BT /F1 10.5 Tf 52.0 301.1 Td (4. Inicialização web: instalamos nginx por dnf e incorporamos proxy.com ao) Tj ET
-BT /F1 10.5 Tf 52.0 287.0 Td (user_data usando base64. O arquivo original do proxy é preservado. Uma configuração) Tj ET
-BT /F1 10.5 Tf 52.0 272.8 Td (principal mínima do nginx evita concorrência entre servidores padrão. O) Tj ET
-BT /F1 10.5 Tf 52.0 258.6 Td (provisionador de envio de arquivo por SSH foi removido.) Tj ET
-BT /F1 10.5 Tf 52.0 239.4 Td (5. Serviço de metadados: declaramos tokens opcionais explicitamente para preservar) Tj ET
-BT /F1 10.5 Tf 52.0 225.3 Td (a condição didática do exercício original. É uma vulnerabilidade deliberada do) Tj ET
-BT /F1 10.5 Tf 52.0 211.1 Td (laboratório, e não uma configuração recomendada para sistemas comuns.) Tj ET
-BT /F1 10.5 Tf 52.0 191.9 Td (6. Repetição: start.sh gera a chave SSH apenas se ela não existir. Assim, uma nova) Tj ET
-BT /F1 10.5 Tf 52.0 177.7 Td (tentativa de criação não troca as chaves da instância anterior. O teste executou o) Tj ET
-BT /F1 10.5 Tf 52.0 163.6 Td (script duas vezes e comparou o hash da chave, que permaneceu igual.) Tj ET
-BT /F1 10.5 Tf 52.0 144.4 Td (7. Identificação do CloudGoat: não distribuímos o lock de providers dentro do) Tj ET
-BT /F1 10.5 Tf 52.0 130.2 Td (template. Na combinação de versões testada, o comando terraform providers falhava) Tj ET
-BT /F1 10.5 Tf 52.0 116.0 Td (antes do primeiro init quando o lock existia sem plugins instalados. O CloudGoat) Tj ET
-BT /F1 10.5 Tf 52.0 101.9 Td (usava essa saída para detectar AWS e deixava de passar profile. A instância gera) Tj ET
-BT /F1 10.5 Tf 52.0 87.7 Td (seu próprio lock durante init. A correção foi verificada pelos métodos de detecção) Tj ET
-BT /F1 10.5 Tf 52.0 73.5 Td (e planejamento do próprio CloudGoat.) Tj ET
+BT /F1 10.5 Tf 52.0 790.0 Td (role à EC2.) Tj ET
+BT /F1 10.5 Tf 52.0 770.8 Td (A aplicação é um nginx configurado como proxy. A configuração vulnerável e a) Tj ET
+BT /F1 10.5 Tf 52.0 756.7 Td (identidade da instância compõem o exercício. O aluno começa como um visitante) Tj ET
+BT /F1 10.5 Tf 52.0 742.5 Td (externo, com o IP do servidor, e precisa compreender o comportamento do endpoint e) Tj ET
+BT /F1 10.5 Tf 52.0 728.3 Td (as relações entre aplicação, identidade e armazenamento. O objetivo é recuperar os) Tj ET
+BT /F1 10.5 Tf 52.0 714.1 Td (dados fictícios do cenário.) Tj ET
+BT /F1 10.5 Tf 52.0 695.0 Td (No código original, um provisionador Terraform envia proxy.com por SSH. Um script) Tj ET
+BT /F1 10.5 Tf 52.0 680.8 Td (de inicialização instala o nginx e utiliza o arquivo recebido. Esses dois) Tj ET
+BT /F1 10.5 Tf 52.0 666.6 Td (mecanismos podem executar em momentos diferentes; a adaptação concentra essa) Tj ET
+BT /F1 10.5 Tf 52.0 652.4 Td (configuração na inicialização para reduzir essa dependência temporal.) Tj ET
+BT /F2 14.5 Tf 52.0 626.3 Td (4. O que a conta acadêmica ofereceu) Tj ET
+BT /F1 10.5 Tf 52.0 597.7 Td (A consulta ao IAM confirmou um instance profile preexistente chamado) Tj ET
+BT /F1 10.5 Tf 52.0 583.5 Td (LabInstanceProfile, associado à LabRole, com confiança para EC2. As políticas) Tj ET
+BT /F1 10.5 Tf 52.0 569.3 Td (consultadas oferecem operações EC2 e S3 e impõem restrições de região, imagem de) Tj ET
+BT /F1 10.5 Tf 52.0 555.2 Td (sistema, tipo de instância e volume.) Tj ET
+BT /F1 10.5 Tf 52.0 536.0 Td (Essas políticas pertencem à role da instância. Elas não são, por si só, prova de) Tj ET
+BT /F1 10.5 Tf 52.0 521.8 Td (todas as permissões efetivas da sessão que provisiona o ambiente. Foi executado) Tj ET
+BT /F1 10.5 Tf 52.0 507.6 Td (também um pedido EC2 em modo dry-run, que retornou Request would have succeeded com) Tj ET
+BT /F1 10.5 Tf 52.0 493.5 Td (os parâmetros escolhidos. Esse teste não criou uma instância e foi seguido por) Tj ET
+BT /F1 10.5 Tf 52.0 479.3 Td (validação na implantação real.) Tj ET
+BT /F1 10.5 Tf 52.0 460.1 Td (As credenciais do aluno são temporárias: Access Key ID, Secret Access Key e Session) Tj ET
+BT /F1 10.5 Tf 52.0 445.9 Td (Token devem vir juntos da seção AWS CLI do laboratório. O perfil local usado nos) Tj ET
+BT /F1 10.5 Tf 52.0 431.8 Td (exemplos é cloudgoat-lab. Nenhuma credencial, número de conta específico ou token) Tj ET
+BT /F1 10.5 Tf 52.0 417.6 Td (foi incluído neste repositório público.) Tj ET
+BT /F2 14.5 Tf 52.0 391.4 Td (5. Mudanças e justificativas) Tj ET
+BT /F1 10.5 Tf 52.0 362.8 Td (1. Identidade da EC2: removemos a criação da role e do instance profile originais e) Tj ET
+BT /F1 10.5 Tf 52.0 348.7 Td (usamos um data source para LabInstanceProfile. Não alteramos a LabRole, não) Tj ET
+BT /F1 10.5 Tf 52.0 334.5 Td (anexamos políticas e não tentamos liberar ações negadas. O Terraform não exclui) Tj ET
+BT /F1 10.5 Tf 52.0 320.3 Td (esse recurso institucional no encerramento.) Tj ET
+BT /F1 10.5 Tf 52.0 301.1 Td (2. Sistema operacional remoto: substituímos a AMI Ubuntu por Amazon Linux 2023) Tj ET
+BT /F1 10.5 Tf 52.0 287.0 Td (x86_64, obtida de um parâmetro público AWS. A mudança atende à restrição observada) Tj ET
+BT /F1 10.5 Tf 52.0 272.8 Td (sobre o proprietário da AMI. A VM local continua Ubuntu Server; ela apenas controla) Tj ET
+BT /F1 10.5 Tf 52.0 258.6 Td (o laboratório remoto.) Tj ET
+BT /F1 10.5 Tf 52.0 239.4 Td (3. Capacidade: mantivemos t3.micro e volume gp2 de 8 GiB. A adaptação não precisa) Tj ET
+BT /F1 10.5 Tf 52.0 225.3 Td (de RDS nem CodeBuild. Essa escolha é diferente dos recursos do cenário que falhou) Tj ET
+BT /F1 10.5 Tf 52.0 211.1 Td (inicialmente.) Tj ET
+BT /F1 10.5 Tf 52.0 191.9 Td (4. Inicialização web: instalamos nginx por dnf e incorporamos proxy.com ao) Tj ET
+BT /F1 10.5 Tf 52.0 177.7 Td (user_data usando base64. O arquivo original do proxy é preservado. Uma configuração) Tj ET
+BT /F1 10.5 Tf 52.0 163.6 Td (principal mínima do nginx evita concorrência entre servidores padrão. O) Tj ET
+BT /F1 10.5 Tf 52.0 149.4 Td (provisionador de envio de arquivo por SSH foi removido.) Tj ET
+BT /F1 10.5 Tf 52.0 130.2 Td (5. Serviço de metadados: declaramos tokens opcionais explicitamente para preservar) Tj ET
+BT /F1 10.5 Tf 52.0 116.0 Td (a condição didática do exercício original. É uma vulnerabilidade deliberada do) Tj ET
+BT /F1 10.5 Tf 52.0 101.9 Td (laboratório, e não uma configuração recomendada para sistemas comuns.) Tj ET
+BT /F1 10.5 Tf 52.0 82.7 Td (6. Repetição: start.sh gera a chave SSH apenas se ela não existir. Assim, uma nova) Tj ET
 BT /F1 8 Tf 0 0 0 rg 52 30 Td (CloudGoat - documento de estudo - pagina 2) Tj ET
 Q
 endstream
@@ -122,54 +121,55 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
 endobj
 9 0 obj
-<< /Length 4610 >>
+<< /Length 4922 >>
 stream
 q
 0 0 0 rg
-BT /F2 14.5 Tf 52.0 783.0 Td (6. A restrição de S3 encontrada na implantação) Tj ET
-BT /F1 10.5 Tf 52.0 754.4 Td (A conta permitiu criar o bucket, mas negou GetBucketObjectLockConfiguration. O) Tj ET
-BT /F1 10.5 Tf 52.0 740.3 Td (provider AWS consultava essa configuração no ciclo de leitura de aws_s3_bucket e o) Tj ET
-BT /F1 10.5 Tf 52.0 726.1 Td (apply falhava. O erro não significava que criar o bucket ou seus objetos fosse) Tj ET
-BT /F1 10.5 Tf 52.0 711.9 Td (proibido.) Tj ET
-BT /F1 10.5 Tf 52.0 692.7 Td (O ciclo de vida do bucket passou a usar terraform_data com um script AWS CLI. As) Tj ET
-BT /F1 10.5 Tf 52.0 678.6 Td (operações são STS para confirmar a conta, ListBuckets para identificar existência,) Tj ET
-BT /F1 10.5 Tf 52.0 664.4 Td (HeadBucket com expected-bucket-owner para verificar o proprietário, CreateBucket) Tj ET
-BT /F1 10.5 Tf 52.0 650.2 Td (quando necessário e PutBucketTagging para registrar o cenário. O script não) Tj ET
-BT /F1 10.5 Tf 52.0 636.0 Td (consulta nem modifica Object Lock; o deny institucional continua em vigor.) Tj ET
-BT /F1 10.5 Tf 52.0 616.9 Td (Os quatro objetos fictícios permanecem gerenciados por aws_s3_object. A dependência) Tj ET
-BT /F1 10.5 Tf 52.0 602.7 Td (Terraform garante que o gerenciamento do bucket termine antes do envio dos objetos.) Tj ET
-BT /F1 10.5 Tf 52.0 588.5 Td (No destroy, o script confere o nome exclusivo do cenário e a conta antes de remover) Tj ET
-BT /F1 10.5 Tf 52.0 574.3 Td (o bucket e seu conteúdo.) Tj ET
-BT /F1 10.5 Tf 52.0 555.2 Td (A migração da tentativa parcialmente criada preservou o bucket e a EC2. O estado) Tj ET
-BT /F1 10.5 Tf 52.0 541.0 Td (foi copiado como backup antes de retirar apenas o endereço aws_s3_bucket do) Tj ET
-BT /F1 10.5 Tf 52.0 526.8 Td (controle antigo. O novo gerenciamento adotou o bucket existente. O plano de) Tj ET
-BT /F1 10.5 Tf 52.0 512.6 Td (retomada apresentou cinco adições, nenhuma alteração e nenhuma exclusão de recursos) Tj ET
-BT /F1 10.5 Tf 52.0 498.5 Td (existentes.) Tj ET
-BT /F2 14.5 Tf 52.0 472.3 Td (7. Como funciona a versão adaptada) Tj ET
-BT /F1 10.5 Tf 52.0 443.7 Td (O aluno executa o CloudGoat a partir da VM local. Terraform usa suas credenciais) Tj ET
-BT /F1 10.5 Tf 52.0 429.5 Td (temporárias para criar rede, EC2 e armazenamento na conta do laboratório. A EC2) Tj ET
-BT /F1 10.5 Tf 52.0 415.4 Td (recebe o instance profile institucional já existente. O nginx sobe por cloud-init e) Tj ET
-BT /F1 10.5 Tf 52.0 401.2 Td (o CloudGoat informa o IP inicial.) Tj ET
-BT /F1 10.5 Tf 52.0 382.0 Td (O início do exercício continua sendo o endpoint web e os dados do cenário continuam) Tj ET
-BT /F1 10.5 Tf 52.0 367.8 Td (fictícios. Uma requisição comum recebeu HTTP 400, resposta prevista pela) Tj ET
-BT /F1 10.5 Tf 52.0 353.7 Td (configuração original para pedidos que não atendem às condições da aplicação. Isso) Tj ET
-BT /F1 10.5 Tf 52.0 339.5 Td (foi usado apenas como teste de disponibilidade. Não executamos a recuperação de) Tj ET
-BT /F1 10.5 Tf 52.0 325.3 Td (credenciais nem a extração de dados para resolver o desafio.) Tj ET
-BT /F1 10.5 Tf 52.0 306.1 Td (A diferença pedagógica principal é a LabRole compartilhada, que pode ser mais ampla) Tj ET
-BT /F1 10.5 Tf 52.0 292.0 Td (que a role original. A versão não reproduz fielmente o isolamento IAM original. As) Tj ET
-BT /F1 10.5 Tf 52.0 277.8 Td (atividades devem ficar limitadas aos recursos criados para o exercício. O perfil) Tj ET
-BT /F1 10.5 Tf 52.0 263.6 Td (administrativo usado para provisionar não deve ser usado para obter diretamente a) Tj ET
-BT /F1 10.5 Tf 52.0 249.4 Td (resposta.) Tj ET
-BT /F1 10.5 Tf 52.0 230.3 Td (Outra limitação é a detecção de mudanças externas no bucket: terraform_data não) Tj ET
-BT /F1 10.5 Tf 52.0 216.1 Td (oferece todas as leituras de drift do recurso aws_s3_bucket. As credenciais do) Tj ET
-BT /F1 10.5 Tf 52.0 201.9 Td (perfil também precisam continuar válidas para os provisionadores de criação e) Tj ET
-BT /F1 10.5 Tf 52.0 187.7 Td (remoção.) Tj ET
-BT /F2 14.5 Tf 52.0 161.6 Td (8. Resultados verificados) Tj ET
-BT /F1 10.5 Tf 60.0 133.0 Td (- Terraform init e validate concluídos sem erro.) Tj ET
-BT /F1 10.5 Tf 60.0 118.8 Td (- Plano inicial com 16 recursos novos e nenhuma criação IAM.) Tj ET
-BT /F1 10.5 Tf 60.0 104.6 Td (- Dry-run EC2 autorizado com LabInstanceProfile.) Tj ET
-BT /F1 10.5 Tf 60.0 90.5 Td (- Implantação real concluída após o ajuste S3.) Tj ET
-BT /F1 10.5 Tf 60.0 76.3 Td (- Nova execução pelo CloudGoat concluiu init, plan, apply e output sem erro.) Tj ET
+BT /F1 10.5 Tf 52.0 790.0 Td (tentativa de criação não troca as chaves da instância anterior. O teste executou o) Tj ET
+BT /F1 10.5 Tf 52.0 775.8 Td (script duas vezes e comparou o hash da chave, que permaneceu igual.) Tj ET
+BT /F1 10.5 Tf 52.0 756.7 Td (7. Identificação do CloudGoat: não distribuímos o lock de providers dentro do) Tj ET
+BT /F1 10.5 Tf 52.0 742.5 Td (template. Na combinação de versões testada, o comando terraform providers falhava) Tj ET
+BT /F1 10.5 Tf 52.0 728.3 Td (antes do primeiro init quando o lock existia sem plugins instalados. O CloudGoat) Tj ET
+BT /F1 10.5 Tf 52.0 714.1 Td (usava essa saída para detectar AWS e deixava de passar profile. A instância gera) Tj ET
+BT /F1 10.5 Tf 52.0 700.0 Td (seu próprio lock durante init. A correção foi verificada pelos métodos de detecção) Tj ET
+BT /F1 10.5 Tf 52.0 685.8 Td (e planejamento do próprio CloudGoat.) Tj ET
+BT /F2 14.5 Tf 52.0 659.6 Td (6. A restrição de S3 encontrada na implantação) Tj ET
+BT /F1 10.5 Tf 52.0 631.0 Td (A conta permitiu criar o bucket, mas negou GetBucketObjectLockConfiguration. O) Tj ET
+BT /F1 10.5 Tf 52.0 616.9 Td (provider AWS consultava essa configuração no ciclo de leitura de aws_s3_bucket e o) Tj ET
+BT /F1 10.5 Tf 52.0 602.7 Td (apply falhava. O erro não significava que criar o bucket ou seus objetos fosse) Tj ET
+BT /F1 10.5 Tf 52.0 588.5 Td (proibido.) Tj ET
+BT /F1 10.5 Tf 52.0 569.3 Td (O ciclo de vida do bucket passou a usar terraform_data com um script AWS CLI. As) Tj ET
+BT /F1 10.5 Tf 52.0 555.2 Td (operações são STS para confirmar a conta, ListBuckets para identificar existência,) Tj ET
+BT /F1 10.5 Tf 52.0 541.0 Td (HeadBucket com expected-bucket-owner para verificar o proprietário, CreateBucket) Tj ET
+BT /F1 10.5 Tf 52.0 526.8 Td (quando necessário e PutBucketTagging para registrar o cenário. O script não) Tj ET
+BT /F1 10.5 Tf 52.0 512.6 Td (consulta nem modifica Object Lock; o deny institucional continua em vigor.) Tj ET
+BT /F1 10.5 Tf 52.0 493.5 Td (Os quatro objetos fictícios permanecem gerenciados por aws_s3_object. A dependência) Tj ET
+BT /F1 10.5 Tf 52.0 479.3 Td (Terraform garante que o gerenciamento do bucket termine antes do envio dos objetos.) Tj ET
+BT /F1 10.5 Tf 52.0 465.1 Td (No destroy, o script confere o nome exclusivo do cenário e a conta antes de remover) Tj ET
+BT /F1 10.5 Tf 52.0 450.9 Td (o bucket e seu conteúdo.) Tj ET
+BT /F1 10.5 Tf 52.0 431.8 Td (A migração da tentativa parcialmente criada preservou o bucket e a EC2. O estado) Tj ET
+BT /F1 10.5 Tf 52.0 417.6 Td (foi copiado como backup antes de retirar apenas o endereço aws_s3_bucket do) Tj ET
+BT /F1 10.5 Tf 52.0 403.4 Td (controle antigo. O novo gerenciamento adotou o bucket existente. O plano de) Tj ET
+BT /F1 10.5 Tf 52.0 389.2 Td (retomada apresentou cinco adições, nenhuma alteração e nenhuma exclusão de recursos) Tj ET
+BT /F1 10.5 Tf 52.0 375.1 Td (existentes.) Tj ET
+BT /F2 14.5 Tf 52.0 348.9 Td (7. Como funciona a versão adaptada) Tj ET
+BT /F1 10.5 Tf 52.0 320.3 Td (O aluno executa o CloudGoat a partir da VM local. Terraform usa suas credenciais) Tj ET
+BT /F1 10.5 Tf 52.0 306.1 Td (temporárias para criar rede, EC2 e armazenamento na conta do laboratório. A EC2) Tj ET
+BT /F1 10.5 Tf 52.0 292.0 Td (recebe o instance profile institucional já existente. O nginx sobe por cloud-init e) Tj ET
+BT /F1 10.5 Tf 52.0 277.8 Td (o CloudGoat informa o IP inicial.) Tj ET
+BT /F1 10.5 Tf 52.0 258.6 Td (O início do exercício continua sendo o endpoint web e os dados do cenário continuam) Tj ET
+BT /F1 10.5 Tf 52.0 244.4 Td (fictícios. Uma requisição comum recebeu HTTP 400, resposta prevista pela) Tj ET
+BT /F1 10.5 Tf 52.0 230.3 Td (configuração original para pedidos que não atendem às condições da aplicação. Isso) Tj ET
+BT /F1 10.5 Tf 52.0 216.1 Td (foi usado apenas como teste de disponibilidade. Não executamos a recuperação de) Tj ET
+BT /F1 10.5 Tf 52.0 201.9 Td (credenciais nem a extração de dados para resolver o desafio.) Tj ET
+BT /F1 10.5 Tf 52.0 182.7 Td (A diferença pedagógica principal é a LabRole compartilhada, que pode ser mais ampla) Tj ET
+BT /F1 10.5 Tf 52.0 168.6 Td (que a role original. A versão não reproduz fielmente o isolamento IAM original. As) Tj ET
+BT /F1 10.5 Tf 52.0 154.4 Td (atividades devem ficar limitadas aos recursos criados para o exercício. O perfil) Tj ET
+BT /F1 10.5 Tf 52.0 140.2 Td (administrativo usado para provisionar não deve ser usado para obter diretamente a) Tj ET
+BT /F1 10.5 Tf 52.0 126.0 Td (resposta.) Tj ET
+BT /F1 10.5 Tf 52.0 106.9 Td (Outra limitação é a detecção de mudanças externas no bucket: terraform_data não) Tj ET
+BT /F1 10.5 Tf 52.0 92.7 Td (oferece todas as leituras de drift do recurso aws_s3_bucket. As credenciais do) Tj ET
+BT /F1 10.5 Tf 52.0 78.5 Td (perfil também precisam continuar válidas para os provisionadores de criação e) Tj ET
 BT /F1 8 Tf 0 0 0 rg 52 30 Td (CloudGoat - documento de estudo - pagina 3) Tj ET
 Q
 endstream
@@ -178,55 +178,54 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
 endobj
 11 0 obj
-<< /Length 4536 >>
+<< /Length 4249 >>
 stream
 q
 0 0 0 rg
-BT /F1 10.5 Tf 60.0 790.0 Td (- Endpoint HTTP inicial respondeu conforme o comportamento do proxy.) Tj ET
-BT /F1 10.5 Tf 60.0 775.8 Td (- CloudGoat reconheceu uma instância implantada de cloud_breach_s3_academy.) Tj ET
-BT /F1 10.5 Tf 52.0 756.7 Td (O encerramento final foi concluído: 16 recursos destruídos sem erro, EC2 terminada,) Tj ET
-BT /F1 10.5 Tf 52.0 742.5 Td (bucket ausente e CloudGoat sem instâncias implantadas. A conferência direta também) Tj ET
-BT /F1 10.5 Tf 52.0 728.3 Td (confirmou a ausência dos recursos de teste anteriores e a preservação de) Tj ET
-BT /F1 10.5 Tf 52.0 714.1 Td (LabInstanceProfile. A consulta por tags ainda continha entradas antigas; consultas) Tj ET
-BT /F1 10.5 Tf 52.0 700.0 Td (diretas aos IDs retornaram NotFound. Os detalhes estão em docs/cleanup.md. Não) Tj ET
-BT /F1 10.5 Tf 52.0 685.8 Td (confunda validação estática, teste de permissão e teste real: cada um comprova uma) Tj ET
-BT /F1 10.5 Tf 52.0 671.6 Td (etapa diferente.) Tj ET
-BT /F2 14.5 Tf 52.0 645.4 Td (9. Preparar a VM para a faculdade) Tj ET
-BT /F1 10.5 Tf 52.0 616.9 Td (Destruir o ambiente AWS não remove as ferramentas nem o cenário instalado na VM.) Tj ET
-BT /F1 10.5 Tf 52.0 602.7 Td (Depois de confirmar a limpeza, desligue e exporte a VM. O arquivo exportado) Tj ET
-BT /F1 10.5 Tf 52.0 588.5 Td (preserva o Ubuntu, ferramentas e alterações locais; os recursos da AWS não são) Tj ET
-BT /F1 10.5 Tf 52.0 574.3 Td (transportados.) Tj ET
-BT /F1 10.5 Tf 52.0 555.2 Td (Na faculdade, inicie o laboratório e obtenha novas credenciais temporárias.) Tj ET
-BT /F1 10.5 Tf 52.0 541.0 Td (Configure o perfil e o token em uma sessão SSH sua, sem publicá-los:) Tj ET
-BT /F1 9.0 Tf 52.0 521.8 Td (aws configure --profile cloudgoat-lab) Tj ET
-BT /F1 9.0 Tf 52.0 509.7 Td (read -rs -p "Session Token: " AWS_LAB_TOKEN) Tj ET
-BT /F1 9.0 Tf 52.0 497.5 Td (aws configure set aws_session_token "$AWS_LAB_TOKEN" --profile cloudgoat-lab) Tj ET
-BT /F1 9.0 Tf 52.0 485.4 Td (unset AWS_LAB_TOKEN) Tj ET
-BT /F1 9.0 Tf 52.0 473.2 Td (aws sts get-caller-identity --profile cloudgoat-lab) Tj ET
-BT /F1 10.5 Tf 52.0 456.1 Td (Se o Account ID mudar, não reutilize o estado da conta anterior. Confirme também a) Tj ET
-BT /F1 10.5 Tf 52.0 441.9 Td (existência e as permissões de LabInstanceProfile na nova conta. Atualize a) Tj ET
-BT /F1 10.5 Tf 52.0 427.7 Td (whitelist para a rede atual:) Tj ET
-BT /F1 9.0 Tf 52.0 408.5 Td (cloudgoat config whitelist --auto) Tj ET
-BT /F1 9.0 Tf 52.0 396.4 Td (cloudgoat create cloud_breach_s3_academy --profile cloudgoat-lab) Tj ET
-BT /F1 10.5 Tf 52.0 379.2 Td (O IP exibido será o novo ponto de partida. Aguarde o bootstrap. Depois da) Tj ET
-BT /F1 10.5 Tf 52.0 365.1 Td (atividade:) Tj ET
-BT /F1 9.0 Tf 52.0 345.9 Td (cloudgoat destroy cloud_breach_s3_academy --profile cloudgoat-lab) Tj ET
-BT /F1 9.0 Tf 52.0 333.7 Td (cloudgoat list deployed) Tj ET
-BT /F1 10.5 Tf 52.0 316.6 Td (Desligar a VM local ou expirar a sessão não garante remoção dos recursos AWS. Em) Tj ET
-BT /F1 10.5 Tf 52.0 302.4 Td (caso de erro no destroy, preserve o estado e corrija o problema antes de apagar) Tj ET
-BT /F1 10.5 Tf 52.0 288.2 Td (arquivos locais.) Tj ET
-BT /F2 14.5 Tf 52.0 262.1 Td (10. Organização e publicação no GitHub) Tj ET
-BT /F1 10.5 Tf 52.0 233.5 Td (O repositório cloudgoat-students inclui README, licença original, atribuição,) Tj ET
-BT /F1 10.5 Tf 52.0 219.3 Td (matriz de compatibilidade, instalador e uma pasta por cenário. As futuras) Tj ET
-BT /F1 10.5 Tf 52.0 205.1 Td (adaptações AWS e Azure devem documentar pré-requisitos, diferenças e testes antes) Tj ET
-BT /F1 10.5 Tf 52.0 191.0 Td (de serem anunciadas como compatíveis.) Tj ET
-BT /F1 10.5 Tf 52.0 171.8 Td (O pacote público contém somente código, scripts, assets fictícios e documentação.) Tj ET
-BT /F1 10.5 Tf 52.0 157.6 Td (Credenciais, chaves SSH geradas, estados Terraform, planos, logs de sessões,) Tj ET
-BT /F1 10.5 Tf 52.0 143.4 Td (whitelist e start.txt não pertencem ao repositório. O instalador recusa) Tj ET
-BT /F1 10.5 Tf 52.0 129.3 Td (sobrescrever um cenário existente e não cria recursos na nuvem.) Tj ET
-BT /F1 10.5 Tf 52.0 110.1 Td (A licença BSD 3-Clause do CloudGoat permite redistribuição com modificações,) Tj ET
-BT /F1 10.5 Tf 52.0 95.9 Td (exigindo preservação do aviso de copyright, condições e disclaimer. O projeto é) Tj ET
-BT /F1 10.5 Tf 52.0 81.7 Td (independente e não implica endosso dos autores originais ou dos provedores de) Tj ET
+BT /F1 10.5 Tf 52.0 790.0 Td (remoção.) Tj ET
+BT /F2 14.5 Tf 52.0 763.8 Td (8. Resultados verificados) Tj ET
+BT /F1 10.5 Tf 60.0 735.3 Td (- Terraform init e validate concluídos sem erro.) Tj ET
+BT /F1 10.5 Tf 60.0 721.1 Td (- Plano inicial com 16 recursos novos e nenhuma criação IAM.) Tj ET
+BT /F1 10.5 Tf 60.0 706.9 Td (- Dry-run EC2 autorizado com LabInstanceProfile.) Tj ET
+BT /F1 10.5 Tf 60.0 692.7 Td (- Implantação real concluída após o ajuste S3.) Tj ET
+BT /F1 10.5 Tf 60.0 678.6 Td (- Nova execução pelo CloudGoat concluiu init, plan, apply e output sem erro.) Tj ET
+BT /F1 10.5 Tf 60.0 664.4 Td (- Endpoint HTTP inicial respondeu conforme o comportamento do proxy.) Tj ET
+BT /F1 10.5 Tf 60.0 650.2 Td (- CloudGoat reconheceu uma instância implantada de cloud_breach_s3_academy.) Tj ET
+BT /F1 10.5 Tf 52.0 631.0 Td (O encerramento final foi concluído: 16 recursos destruídos sem erro, EC2 terminada,) Tj ET
+BT /F1 10.5 Tf 52.0 616.9 Td (bucket ausente e CloudGoat sem instâncias implantadas. A conferência direta também) Tj ET
+BT /F1 10.5 Tf 52.0 602.7 Td (confirmou a ausência dos recursos de teste anteriores e a preservação de) Tj ET
+BT /F1 10.5 Tf 52.0 588.5 Td (LabInstanceProfile. A consulta por tags ainda continha entradas antigas; consultas) Tj ET
+BT /F1 10.5 Tf 52.0 574.3 Td (diretas aos IDs retornaram NotFound. Os detalhes estão em docs/cleanup.md. Não) Tj ET
+BT /F1 10.5 Tf 52.0 560.2 Td (confunda validação estática, teste de permissão e teste real: cada um comprova uma) Tj ET
+BT /F1 10.5 Tf 52.0 546.0 Td (etapa diferente.) Tj ET
+BT /F2 14.5 Tf 52.0 519.8 Td (9. Preparar a VM para a faculdade) Tj ET
+BT /F1 10.5 Tf 52.0 491.2 Td (Destruir o ambiente AWS não remove as ferramentas nem o cenário instalado na VM.) Tj ET
+BT /F1 10.5 Tf 52.0 477.1 Td (Depois de confirmar a limpeza, desligue e exporte a VM. O arquivo exportado) Tj ET
+BT /F1 10.5 Tf 52.0 462.9 Td (preserva o Ubuntu, ferramentas e alterações locais; os recursos da AWS não são) Tj ET
+BT /F1 10.5 Tf 52.0 448.7 Td (transportados.) Tj ET
+BT /F1 10.5 Tf 52.0 429.5 Td (Na faculdade, inicie o laboratório e obtenha novas credenciais temporárias.) Tj ET
+BT /F1 10.5 Tf 52.0 415.4 Td (Configure o perfil e o token em uma sessão SSH sua, sem publicá-los:) Tj ET
+BT /F1 9.0 Tf 52.0 396.2 Td (aws configure --profile cloudgoat-lab) Tj ET
+BT /F1 9.0 Tf 52.0 384.0 Td (read -rs -p "Session Token: " AWS_LAB_TOKEN) Tj ET
+BT /F1 9.0 Tf 52.0 371.9 Td (aws configure set aws_session_token "$AWS_LAB_TOKEN" --profile cloudgoat-lab) Tj ET
+BT /F1 9.0 Tf 52.0 359.7 Td (unset AWS_LAB_TOKEN) Tj ET
+BT /F1 9.0 Tf 52.0 347.6 Td (aws sts get-caller-identity --profile cloudgoat-lab) Tj ET
+BT /F1 10.5 Tf 52.0 330.4 Td (Se o Account ID mudar, não reutilize o estado da conta anterior. Confirme também a) Tj ET
+BT /F1 10.5 Tf 52.0 316.3 Td (existência e as permissões de LabInstanceProfile na nova conta. Atualize a) Tj ET
+BT /F1 10.5 Tf 52.0 302.1 Td (whitelist para a rede atual:) Tj ET
+BT /F1 9.0 Tf 52.0 282.9 Td (cloudgoat config whitelist --auto) Tj ET
+BT /F1 9.0 Tf 52.0 270.8 Td (cloudgoat create cloud_breach_s3_academy --profile cloudgoat-lab) Tj ET
+BT /F1 10.5 Tf 52.0 253.6 Td (O IP exibido será o novo ponto de partida. Aguarde o bootstrap. Depois da) Tj ET
+BT /F1 10.5 Tf 52.0 239.4 Td (atividade:) Tj ET
+BT /F1 9.0 Tf 52.0 220.3 Td (cloudgoat destroy cloud_breach_s3_academy --profile cloudgoat-lab) Tj ET
+BT /F1 9.0 Tf 52.0 208.1 Td (cloudgoat list deployed) Tj ET
+BT /F1 10.5 Tf 52.0 191.0 Td (Desligar a VM local ou expirar a sessão não garante remoção dos recursos AWS. Em) Tj ET
+BT /F1 10.5 Tf 52.0 176.8 Td (caso de erro no destroy, preserve o estado e corrija o problema antes de apagar) Tj ET
+BT /F1 10.5 Tf 52.0 162.6 Td (arquivos locais.) Tj ET
+BT /F2 14.5 Tf 52.0 136.4 Td (10. Organização e publicação no GitHub) Tj ET
+BT /F1 10.5 Tf 52.0 107.9 Td (O repositório cloudgoat-students inclui README, licença original, atribuição,) Tj ET
+BT /F1 10.5 Tf 52.0 93.7 Td (matriz de compatibilidade, instalador e uma pasta por cenário. As futuras) Tj ET
+BT /F1 10.5 Tf 52.0 79.5 Td (adaptações AWS e Azure devem documentar pré-requisitos, diferenças e testes antes) Tj ET
 BT /F1 8 Tf 0 0 0 rg 52 30 Td (CloudGoat - documento de estudo - pagina 4) Tj ET
 Q
 endstream
@@ -235,27 +234,35 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
 endobj
 13 0 obj
-<< /Length 1788 >>
+<< /Length 2652 >>
 stream
 q
 0 0 0 rg
-BT /F1 10.5 Tf 52.0 790.0 Td (nuvem.) Tj ET
-BT /F2 14.5 Tf 52.0 763.8 Td (11. Explicação para apresentação) Tj ET
-BT /F1 10.5 Tf 52.0 735.3 Td (O cenário original dependia de IAM que o ambiente acadêmico não permitia criar.) Tj ET
-BT /F1 10.5 Tf 52.0 721.1 Td (Reutilizamos uma identidade institucional autorizada, ajustamos a imagem da EC2 às) Tj ET
-BT /F1 10.5 Tf 52.0 706.9 Td (políticas e mantivemos o objetivo de aprendizagem. Corrigimos também a detecção de) Tj ET
-BT /F1 10.5 Tf 52.0 692.7 Td (plataforma do CloudGoat e a incompatibilidade de leitura S3 do provider com o deny) Tj ET
-BT /F1 10.5 Tf 52.0 678.6 Td (de Object Lock. As diferenças e limitações foram documentadas; o desafio foi) Tj ET
-BT /F1 10.5 Tf 52.0 664.4 Td (disponibilizado para o aluno resolver sozinho.) Tj ET
-BT /F2 14.5 Tf 52.0 638.2 Td (Fontes e evidências) Tj ET
-BT /F1 10.5 Tf 52.0 609.6 Td (CloudGoat original: https://github.com/RhinoSecurityLabs/cloudgoat) Tj ET
-BT /F1 10.5 Tf 52.0 590.5 Td (Cenário de referência: cloudgoat/scenarios/aws/cloud_breach_s3, commit 63c65bd.) Tj ET
-BT /F1 10.5 Tf 52.0 576.3 Td (Consultamos seus arquivos Terraform, scripts, assets, manifest e README. A licença) Tj ET
-BT /F1 10.5 Tf 52.0 562.1 Td (é reproduzida em LICENSE.) Tj ET
-BT /F1 10.5 Tf 52.0 542.9 Td (As restrições acadêmicas foram confirmadas por respostas da AWS e políticas) Tj ET
-BT /F1 10.5 Tf 52.0 528.8 Td (consultadas na sessão autorizada. O comportamento do provider foi comparado ao) Tj ET
-BT /F1 10.5 Tf 52.0 514.6 Td (código público do terraform-provider-aws. As alterações e o relatório são) Tj ET
-BT /F1 10.5 Tf 52.0 500.4 Td (contribuições da adaptação, não documentação oficial dos serviços.) Tj ET
+BT /F1 10.5 Tf 52.0 790.0 Td (de serem anunciadas como compatíveis.) Tj ET
+BT /F1 10.5 Tf 52.0 770.8 Td (O pacote público contém somente código, scripts, assets fictícios e documentação.) Tj ET
+BT /F1 10.5 Tf 52.0 756.7 Td (Credenciais, chaves SSH geradas, estados Terraform, planos, logs de sessões,) Tj ET
+BT /F1 10.5 Tf 52.0 742.5 Td (whitelist e start.txt não pertencem ao repositório. O instalador recusa) Tj ET
+BT /F1 10.5 Tf 52.0 728.3 Td (sobrescrever um cenário existente e não cria recursos na nuvem.) Tj ET
+BT /F1 10.5 Tf 52.0 709.1 Td (A licença BSD 3-Clause do CloudGoat permite redistribuição com modificações,) Tj ET
+BT /F1 10.5 Tf 52.0 695.0 Td (exigindo preservação do aviso de copyright, condições e disclaimer. O projeto é) Tj ET
+BT /F1 10.5 Tf 52.0 680.8 Td (independente e não implica endosso dos autores originais ou dos provedores de) Tj ET
+BT /F1 10.5 Tf 52.0 666.6 Td (nuvem.) Tj ET
+BT /F2 14.5 Tf 52.0 640.4 Td (11. Explicação para apresentação) Tj ET
+BT /F1 10.5 Tf 52.0 611.9 Td (O cenário original dependia de IAM que o ambiente acadêmico não permitia criar.) Tj ET
+BT /F1 10.5 Tf 52.0 597.7 Td (Reutilizamos uma identidade institucional autorizada, ajustamos a imagem da EC2 às) Tj ET
+BT /F1 10.5 Tf 52.0 583.5 Td (políticas e mantivemos o objetivo de aprendizagem. Corrigimos também a detecção de) Tj ET
+BT /F1 10.5 Tf 52.0 569.3 Td (plataforma do CloudGoat e a incompatibilidade de leitura S3 do provider com o deny) Tj ET
+BT /F1 10.5 Tf 52.0 555.2 Td (de Object Lock. As diferenças e limitações foram documentadas; o desafio foi) Tj ET
+BT /F1 10.5 Tf 52.0 541.0 Td (disponibilizado para o aluno resolver sozinho.) Tj ET
+BT /F2 14.5 Tf 52.0 514.8 Td (Fontes e evidências) Tj ET
+BT /F1 10.5 Tf 52.0 486.2 Td (CloudGoat original: https://github.com/RhinoSecurityLabs/cloudgoat) Tj ET
+BT /F1 10.5 Tf 52.0 467.1 Td (Cenário de referência: cloudgoat/scenarios/aws/cloud_breach_s3, commit 63c65bd.) Tj ET
+BT /F1 10.5 Tf 52.0 452.9 Td (Consultamos seus arquivos Terraform, scripts, assets, manifest e README. A licença) Tj ET
+BT /F1 10.5 Tf 52.0 438.7 Td (é reproduzida em LICENSE.) Tj ET
+BT /F1 10.5 Tf 52.0 419.5 Td (As restrições acadêmicas foram confirmadas por respostas da AWS e políticas) Tj ET
+BT /F1 10.5 Tf 52.0 405.4 Td (consultadas na sessão autorizada. O comportamento do provider foi comparado ao) Tj ET
+BT /F1 10.5 Tf 52.0 391.2 Td (código público do terraform-provider-aws. As alterações e o relatório são) Tj ET
+BT /F1 10.5 Tf 52.0 377.0 Td (contribuições da adaptação, não documentação oficial dos serviços.) Tj ET
 BT /F1 8 Tf 0 0 0 rg 52 30 Td (CloudGoat - documento de estudo - pagina 5) Tj ET
 Q
 endstream
@@ -271,17 +278,17 @@ xref
 0000000148 00000 n 
 0000000245 00000 n 
 0000000347 00000 n 
-0000004604 00000 n 
-0000004746 00000 n 
-0000009672 00000 n 
-0000009814 00000 n 
-0000014475 00000 n 
-0000014618 00000 n 
-0000019206 00000 n 
-0000019350 00000 n 
-0000021190 00000 n 
+0000004690 00000 n 
+0000004832 00000 n 
+0000009572 00000 n 
+0000009714 00000 n 
+0000014687 00000 n 
+0000014830 00000 n 
+0000019131 00000 n 
+0000019275 00000 n 
+0000021979 00000 n 
 trailer
 << /Size 15 /Root 1 0 R >>
 startxref
-21334
+22123
 %%EOF

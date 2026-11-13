@@ -13,6 +13,8 @@ CloudGoat Students é um projeto independente para adaptar esses laboratórios q
 
 Não existe uma permissão universal de conta de estudante. Um teste bem-sucedido em uma sessão voclabs não demonstra compatibilidade com todas as instituições, regiões ou assinaturas. A matriz docs/compatibility.md registra o ambiente observado e os requisitos de cada adaptação.
 
+Uma inspeção estática da base 63c65bd encontrou criação de roles em 28 dos 29 cenários AWS. O único sem criação de role, iam_privesc_by_rollback, cria usuário, política e chave IAM. Todos encontram alguma dependência incompatível com as negativas IAM observadas nesta sessão voclabs. Não executamos os 29 cenários e essa evidência não autoriza generalizar o bloqueio para toda conta de estudante ou para Azure. A negativa de RDS também foi específica à configuração solicitada; não demonstra indisponibilidade de todo o serviço.
+
 ## 2. Por que foi necessário mudar o laboratório
 
 A tentativa inicial usou codebuild_secrets. A autenticação e o planejamento funcionaram, mas a conta negou criação de usuários, roles e políticas IAM. A instância RDS solicitada também foi negada. A falha não foi causada pela VM local nem pelo token após sua configuração correta.
